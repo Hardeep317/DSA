@@ -1,0 +1,78 @@
+// Prime Number : A prime number is a whole number greater than 1 whose only factors are 1 and itself.
+
+
+// JavaScript Code :
+
+// Brute Force Approach
+
+function isPrime(num){ /// Function to check if a number is prime
+    if(num <= 0){
+        return "Please use a number more than one";  // if our number is less than or equal to 0 then we will return this
+    }
+    
+    let i = 2; 
+    
+    while(i < num){
+        if(num % i === 0){
+            return "Not a prime Number";
+        }
+        i++;
+    }
+    
+    return "Prime Number";
+}
+
+// let result = isPrime(10); Calling our function and saving the value to a variable
+// console.log(result);
+
+
+// Optimize approach
+
+// Online Javascript Editor for free
+// Write, Edit and Run your Javascript code using JS Online Compiler
+
+function isPrime(num){
+    if(num <= 0){
+        return "Please use a number more than one";
+    }
+    
+    let i = 2;
+    
+    while(i*i < num){ // here we are checking only to the root of the number that will reduce our time complexity
+        if(num % i === 0){
+            return "Not a prime Number";
+        }
+        i++;
+    }
+    
+    return "Prime Number";
+}
+
+// let result = isPrime(7);  Calling our function and saving the value to a variable
+// console.log(result);
+
+
+// Java Code :
+
+class HelloWorld {
+    
+    public static String isPrime(int num){
+        if(num <= 0){
+            return "Please use a valid value";
+        }
+        
+        int i = 2;
+        
+        while (i*i < num){
+            if(num % i == 0){
+                return "Not a prime number";
+            }
+             i++;
+        }
+        return "Prime Number";
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(isPrime(8));
+    }
+}
