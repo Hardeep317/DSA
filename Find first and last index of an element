@@ -2,8 +2,43 @@
 
 
 // JavaScript Code :
-function hii(){
-    console.log("hii");
+
+var searchRange = function(nums, target) {
+    let ans = [-1,-1];
+
+    ans[0] = binarySearch(nums, target, true);
+
+    if(ans[0] != -1){
+        ans[1] = binarySearch(nums, target, false);
+    }
+
+    return ans;
+};
+
+function binarySearch(arr, target, isFirstIdx){
+    let start = 0;
+    let end = arr.length-1;
+    let ans = -1;
+
+    while(start <= end){
+        let mid = Math.floor((start+end)/2);
+
+        if(arr[mid] === target){
+            ans = mid;  // here we have got a potential answer but there is another possibility that there are similar elements in left or right side
+
+            if(isFirstIdx){ // here we are taking a boolean value to check that if we are looking for starting index or last index
+                end = mid-1;
+            }else{
+                start = mid+1;
+            }
+        }else if(arr[mid] < target){
+            start = mid+1;
+        }else{
+            end = mid-1;
+        }
+    }
+
+    return ans;
 }
 
 
