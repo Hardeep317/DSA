@@ -55,3 +55,62 @@ var findPeakElement = function(nums) {
 
     return start;
 };
+
+
+// Java Code :
+
+// brute force 
+
+// while using brute force our TC will be O(N)
+
+class HelloWorld {
+    public static void main(String[] args) {
+        
+        int [] arr = {1,2,3,4,5,6,5,4,3,2,1};
+        System.out.println(bruteForce(arr));
+    }
+    
+    public static int bruteForce(int [] arr){
+        
+        int ans = 0;
+        
+        for(int i = 1; i < arr.length; i++){
+            if(arr[i] > arr[ans]){
+                ans = i;
+            }else if(arr[i] < arr[ans]){
+                break;
+            }
+        }
+        
+        return ans;
+    }
+}
+
+
+// optimal approach
+
+// while using binary search our TC will be O(lonN)
+class HelloWorld {
+    public static void main(String[] args) {
+        
+        int [] arr = {1,2,3,4,5,6,5,4,3,2,1};
+        System.out.println(binarySearch(arr));
+    }
+    
+    public static int binarySearch(int [] arr){
+        
+        int start = 0, end = arr.length-1;
+        
+        while(start < end){
+            int mid = start + (end-start)/2;
+            
+            if(arr[mid] < arr[mid+1]){
+                start = mid+1;
+            }else if(arr[mid] > arr[mid+1]){
+                end = mid;
+            }
+        }
+        
+        return start;
+    }
+}
