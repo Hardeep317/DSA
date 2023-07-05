@@ -1,6 +1,30 @@
 
 // Insertion Sort
 
+// Javascript Code :
+
+
+function insertionSort(arr){
+        for(let i = 0; i < arr.length-1; i++){
+            let smallest = i;
+            for(let j = i+1; j > 0; j--){
+                if(arr[j] < arr[j-1]){
+                    let temp = arr[j];
+                    arr[j] = arr[j-1];
+                    arr[j-1] = temp;
+                }
+            }
+        
+        
+        }
+        
+    }
+
+
+let arr = [6,8,4,3,1,99,4,2];
+console.log(insertionSort(arr));
+
+
 // Java Code :
 
 class HelloWorld {
