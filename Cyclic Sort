@@ -1,5 +1,28 @@
 // Cyclic sort : It is technique in which we can sort our array in O(N) time complexity.
 
+
+// JavaScript Code :
+
+let arr = [5,4,2,1,3];
+cyclicSort(arr);
+console.log(arr)
+function cyclicSort(arr){
+    let i = 0;
+
+    while(i < arr.length){
+        let correct = arr[i]-1;
+            console.log(arr[i])
+
+        if(arr[i] !== arr[correct]){
+            let temp = arr[i];
+            arr[i] = arr[correct];
+            arr[correct] = temp;
+        }else{
+            i++;
+        }
+    }
+}
+
 // Java Code : 
 
 class HelloWorld {
