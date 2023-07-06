@@ -2,6 +2,33 @@
 
 // Description : Given an array nums containing n distinct numbers in the range [0, n], return the only number in the range that is missing from the array.
 
+// Javascript Code :
+
+var missingNumber = function(nums) {
+    let i = 0;
+
+    while(i < nums.length){
+        let correct = nums[i];
+
+        if(nums[i] < nums.length && nums[i] != nums[correct]){
+            let temp = nums[i];
+            nums[i] = nums[correct];
+            nums[correct] = temp;
+        }else{
+            i++;
+        }
+    }
+
+    for(let idx = 0; idx < nums.length; idx++){
+       if(nums[idx] != idx){
+           return idx;
+       }
+    }
+
+    return nums.length;
+};
+
+
 // Java Code :
 
 class Solution {
