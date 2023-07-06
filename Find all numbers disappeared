@@ -1,5 +1,36 @@
 // leetcode : https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/description/
 
+// JavaScript Code : 
+var findDisappearedNumbers = function(nums) {
+    let ans = [];
+    cyclicSort(nums)
+
+    for(let i = 0; i < nums.length; i++){
+        if(nums[i] !== i+1){
+            ans.push(i+1);
+        }
+    }
+
+    return ans;
+};
+
+function cyclicSort(arr){
+    let i = 0;
+
+    while(i < arr.length){
+        let correct = arr[i]-1;
+
+        if(arr[i] != arr[correct]){
+            let temp = arr[i];
+            arr[i] = arr[correct];
+            arr[correct] = temp;
+        }else{
+            i++;
+        }
+    }
+}
+
+
 // Java Code 
 
 class Solution {
