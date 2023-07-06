@@ -1,5 +1,36 @@
 // leetcode : https://leetcode.com/problems/find-the-duplicate-number/description/
 
+// JavaScript Code :
+
+var findDuplicate = function(nums) {
+    
+    cyclicSort(nums)
+    for(let i = 0; i < nums.length; i++){
+        if(nums[i] !== i+1){
+            return nums[i];
+        }
+    }
+    return -1;
+};
+
+
+function cyclicSort(arr){
+    let i = 0;
+
+    while(i < arr.length){
+        let correct = arr[i]-1;
+
+        if(arr[i] !== arr[correct]){
+            let temp = arr[i];
+            arr[i] = arr[correct];
+            arr[correct] = temp;
+        }else{
+            i++;
+        }
+    }
+}
+
+
 // Java Code : 
 
 class Solution {
