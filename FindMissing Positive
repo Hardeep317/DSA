@@ -1,0 +1,28 @@
+//leetcode : https://leetcode.com/problems/first-missing-positive/description/
+// JavaScript Code :
+
+var firstMissingPositive = function(nums) {
+    cyclicSort(nums);
+
+    for(let i = 0; i < nums.length; i++){
+        if(nums[i] != i+1){
+            return i+1;
+        }
+    }
+    return nums.length+1;
+};
+
+function cyclicSort(arr){
+    let i = 0;
+    while(i < arr.length){
+        let correct = arr[i]-1;
+
+        if(arr[i] > 0 && arr[i] < arr.length && arr[i] !== arr[correct]){
+            let temp = arr[i];
+            arr[i] = arr[correct];
+            arr[correct] = temp;
+        }else{
+            i++;
+        }
+    }
+}
