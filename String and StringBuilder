@@ -1,1 +1,5 @@
 // String : String are immutable if you want to change the value of a string every time it will form a new object.
+
+// StringBuilder : StringBuilder objects are like String objects, except that they can be modified. Internally, these objects are treated like variable-length arrays that contain a sequence of characters. At any point, the length and content of the sequence can be changed through method invocations.
+
+Structure : StringBuilder name = new StringBuilder();
