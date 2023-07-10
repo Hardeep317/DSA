@@ -6,3 +6,35 @@
 
 // Now we have two ways to do that. First we can make n functions for that and each function will call the next function, that will lead us to a lot of memory wastage and after that we will get an error named stack overflow error.
 // But we have another approach that includes recursion in it. In which there will be only one function that will call itself until it will reach the condition.
+
+
+// Functional approach : 
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class HelloWorld {
+    public static void main(String[] args) {
+        print1(1);
+    }
+    
+    static void print1(int n){
+        System.out.println(n);
+        print2(2);
+    }
+    static void print2(int n){
+        System.out.println(n);
+        print3(3);
+    }
+    static void print3(int n){
+        System.out.println(n);
+        print4(4);
+    }
+    static void print4(int n){
+        System.out.println(n);
+        print5(5);
+    }
+    static void print5(int n){
+        System.out.println(n);
+    }
+}
