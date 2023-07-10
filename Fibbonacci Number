@@ -1,0 +1,24 @@
+// Fibbonacci number : The Fibonacci sequence is a set of steadily increasing numbers where each number is equal to the sum of the preceding two numbers. 
+
+
+// Recursive approach : 
+
+
+class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println(fibb(5));
+    }
+    
+    public static int fibb(int n){
+        
+        if(n == 0){
+            return 0;
+        }
+        
+        if(n == 1 || n==2){
+            return 1;
+        }
+            return fibb(n-1)+fibb(n-2);
+        
+    }
+}
