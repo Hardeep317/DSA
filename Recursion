@@ -38,3 +38,25 @@ class HelloWorld {
         System.out.println(n);
     }
 }
+
+
+// Recursive approach :
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class HelloWorld {
+    public static void main(String[] args) {
+        print(1);
+    }
+    
+    static void print(int n){
+        
+        if(n == 5){  // base condition : The condition after that the function will end.
+            System.out.println(5);
+            return;
+        }
+        System.out.println(n);
+        print(n+1); // function behaving recursively.
+    }
+}
