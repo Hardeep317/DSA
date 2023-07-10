@@ -1,0 +1,8 @@
+// Recursion : Recursion is the process of repeating items in a self-similar way.
+
+// Why Recursion : It helps us in solving crucial problems in an easy way.
+
+// Example : Let us say you have to print numbers from one to n and you cannot use loops. 
+
+// Now we have two ways to do that. First we can make n functions for that and each function will call the next function, that will lead us to a lot of memory wastage and after that we will get an error named stack overflow error.
+// But we have another approach that includes recursion in it. In which there will be only one function that will call itself until it will reach the condition.
