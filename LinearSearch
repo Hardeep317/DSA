@@ -1,0 +1,12 @@
+// Linear Search : Linear Search is a basic searching algorithm that will take O(N) time complexity and it will make n iterations.
+
+// javascript code :
+
+let arr = [1,4,2,5,67,9];
+let target = 67;
+
+for(let i = 0; i < arr.length; i++){
+    if(arr[i] === target){
+        return i;
+    }
+}
