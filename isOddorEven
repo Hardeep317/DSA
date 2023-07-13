@@ -1,0 +1,18 @@
+// We will find a number is odd or even using bitwise operations.
+
+// Java Code : 
+
+class HelloWorld {
+    
+    static boolean isOdd(int n){
+        return (n & 1) == 1;
+    }
+    public static void main(String[] args) {
+        int num = 16;
+        if(isOdd(num)){
+            System.out.println("Odd Number");
+        }else{
+            System.out.println("Evene Number");
+        }
+    }
+}
