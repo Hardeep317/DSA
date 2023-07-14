@@ -1,0 +1,13 @@
+
+
+// javaScript code :
+
+
+function numberIndigit(){
+    let n = 123456;
+    let b = 2; // in which form we want numbers in binary or decimal
+    
+    return Math.round(Math.log(n) / Math.log(b))+1;
+}
+
+console.log(numberIndigit());
