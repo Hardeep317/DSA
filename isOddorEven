@@ -16,3 +16,11 @@ class HelloWorld {
         }
     }
 }
+
+// JavaScript code :
+
+function isOdd(num){
+    return (num & 1) = 0;
+}
+
+console.log(isOdd(4));
