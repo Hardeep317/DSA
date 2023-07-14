@@ -11,3 +11,19 @@ function numberIndigit(){
 }
 
 console.log(numberIndigit());
+
+// Java code : 
+
+
+class HelloWorld {
+    public static void main(String[] args) {
+        countNumbers();
+    }
+    
+    static void countNumbers(){
+        int n = 1234324;
+        int b = 10;
+        
+        System.out.println(Math.round(Math.log(n) / Math.log(b)) + 1);
+    }
+}
