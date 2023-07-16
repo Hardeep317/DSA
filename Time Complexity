@@ -1,0 +1,10 @@
+// Time Complexity : The time taken by an algorithm to perform operation respected to its input is called time complexity.
+
+Time Complexity for some famous algorithms :
+
+1. Selection sort --> O(n^2)
+2. Bubble sort --> O(n^2)
+3. Insertion sort --> O(n^2)
+4. Heap sort --> O(n log(n))
+5. Quick sort --> O(n^2)
+6. Merge sort --> O(n log(n))
