@@ -8,3 +8,4 @@ Time Complexity for some famous algorithms :
 4. Heap sort --> O(n log(n))
 5. Quick sort --> O(n^2)
 6. Merge sort --> O(n log(n))
+7. Searching in 2d Array --> O(n^2)
