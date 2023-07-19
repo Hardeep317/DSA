@@ -28,3 +28,32 @@ class Solution {
         return end;
     }
 }
+
+
+// Javascript Code : 
+
+var mySqrt = function(x) {
+    let ans = binarySearch(x);
+
+    return ans;
+};
+
+
+function binarySearch(x){
+    let s = 1;
+    let e = x;
+
+    while(s <= e){
+        let mid = Math.round((s+e)/2);
+
+        if(x/mid === mid){
+            return mid;
+        }else if(x/mid > mid){
+            s = mid+1;
+        }else{
+            e = mid-1;
+        }
+    }
+
+    return e;
+}
