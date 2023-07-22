@@ -1,0 +1,31 @@
+// We will do rotated sorted array Searching using recursion.
+
+// Java Code :
+
+
+class HelloWorld {
+    public static void main(String[] args) {
+        int [] arr = {4,5,6,7,1,2,3};
+        int target = 1;
+        System.out.println(binarySearch(0, arr.length-1, target, arr));
+    }
+    
+    static int binarySearch(int start, int end, int target, int [] arr){
+        
+        if(start > end){  // base condition
+            return -1;
+        }
+        
+        int mid = start+(end-start)/2;
+        
+        if(arr[mid] == target){
+            return mid;
+        }
+        
+        if(arr[start] <= target && target < arr[mid]){
+            return binarySearch(start, mid-1, target, arr); // Recursive calls
+        }else{
+            return binarySearch(mid+1, end, target, arr); // Recursive calls
+        }
+    }
+}
