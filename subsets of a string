@@ -1,0 +1,21 @@
+
+
+
+// Java Code :
+
+public class HelloWorld{
+
+     public static void main(String []args){
+        subSets("", "abc");
+     }
+     
+     static void subSets(String res, String str){
+         if(str.isEmpty()){
+             System.out.println(res);
+             return;
+         }
+         
+         subSets(res+str.charAt(0), str.substring(1));
+         subSets(res, str.substring(1));
+     }
+}
