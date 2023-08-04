@@ -1,0 +1,24 @@
+
+// We have given a string and check if there a group of characters present or not if present skip that part.
+
+// Java Code :
+
+
+class HelloWorld {
+    public static void main(String []args){
+        System.out.println(isApple("abcappleiseatenbyme"));
+     }
+     
+     
+     static String isApple(String str){
+         if(str.isEmpty()){
+             return "";
+         }
+         
+         if(str.startsWith("apple")){
+             return isApple(str.substring(5));
+         }else{
+             return str.charAt(0) + isApple(str.substring(1));
+         }
+     }
+}
