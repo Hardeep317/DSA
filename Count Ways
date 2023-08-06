@@ -1,0 +1,22 @@
+
+// We are given a maze and we need to reach its end point and we can only move right and down. Count the number of ways we can reach to the end of the maze.
+
+// Java Code :
+
+public class HelloWorld{
+
+    public static void main(String []args){
+       System.out.println(countWays(3,3));
+    }
+    
+    static int countWays(int r, int c){
+        if(r == 1 || c == 1){
+            return 1;
+        }
+        
+        int left = countWays(r-1, c );
+        int right = countWays(r, c-1);
+        
+        return left + right;
+    }
+}
