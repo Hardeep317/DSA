@@ -1,0 +1,26 @@
+
+
+// Java Code :
+
+public class HelloWorld{
+
+     public static void main(String []args){
+        printWays("",3,3);
+     }
+     
+     
+     static void printWays(String p, int r, int c){
+         if(r == 1 && c == 1){
+             System.out.println(p);
+         }
+         
+         if(r > 1 ){
+            printWays(p + "R", r-1, c);
+         }
+         
+         if(c > 1){
+            printWays(p + "D", r, c-1);
+         }
+         
+     }
+}
