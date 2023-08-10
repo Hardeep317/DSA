@@ -46,4 +46,4 @@ public class HelloWorld{
      }
 }
 
-// this is good work of recursion
+// The maze problem is a good way to problem to learn backtracking
